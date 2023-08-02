@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="loading" [ngClass]="{'active': data == null}">
+        <div class="load"></div>
+    </div>
+
+    <div class="decoration">
+        <form [formGroup]="formSearch" class="search-field">
+            <input type="text" formControlName="city">
+            <button (click)="searchData()">
+                <img src="assets/icons/search.svg" alt="">
+            </button>
+        </form>
+
+        <div class="local">
+            <img src="assets/icons/radio-button.svg">
+            {{ data?.name }}, {{ data?.sys.country }}
+        </div>
+
+        <span class="temperature">
+            {{ data?.main.temp }} °C
+        </span>
+
+        <div class="climate">
+            <img [src]="weatherImg" alt="">
+            <span class="climate-desc">{{ data?.weather[0].description }}</span>
+        </div>
+    </div>
+    <div class="info">
+        <div class="data">
+            <span class="label">
+                <img src="assets/icons/water-drop.svg">
+                Humidade
+            </span>
+            <span class="value">{{ data?.main.humidity }}%</span>
+        </div>
+        <div class="data">
+            <span class="label">
+                <img src="assets/icons/air.svg">
+                Ventos
+            </span>
+            <span class="value">{{ data?.wind.speed }} km/h</span>
+        </div>
+    </div>
+</div>

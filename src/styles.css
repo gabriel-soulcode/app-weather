@@ -1,0 +1,36 @@
+:root {
+    --primary: #4C8CEC;
+    --lighter: #FFFFFF;
+    --gray: #585858;
+    --font-display: 'Comfortaa', cursive;
+    --shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Lato', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    background-color: #E0E0E0;
+}
+
+app-home {
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+    :root {
+        font-size: 8px;
+    }
+}
